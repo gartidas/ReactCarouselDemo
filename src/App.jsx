@@ -22,7 +22,13 @@ function App() {
           <h1>3</h1>
         </CarouselItem>
         <CarouselItem bg="blue">
-          <h1>4</h1>
+          <div
+            style={{
+              height: "200vh",
+            }}
+          >
+            4
+          </div>
         </CarouselItem>
         <CarouselItem bg="pink">
           <h1>5</h1>
