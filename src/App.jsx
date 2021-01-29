@@ -12,16 +12,16 @@ function App() {
   return (
     <Body>
       <Carousel>
-        <CarouselItem bg="green">
+        <CarouselItem bg="green" title="green">
           <h1>1</h1>
         </CarouselItem>
-        <CarouselItem bg="red">
+        <CarouselItem bg="red" title="red">
           <h1>2</h1>
         </CarouselItem>
-        <CarouselItem bg="yellow">
+        <CarouselItem bg="yellow" title="yellow">
           <h1>3</h1>
         </CarouselItem>
-        <CarouselItem bg="blue">
+        <CarouselItem bg="blue" title="blue">
           <div
             style={{
               height: "200vh",
@@ -30,7 +30,7 @@ function App() {
             4
           </div>
         </CarouselItem>
-        <CarouselItem bg="pink">
+        <CarouselItem bg="pink" title="pink">
           <h1>5</h1>
         </CarouselItem>
       </Carousel>

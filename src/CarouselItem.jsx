@@ -7,6 +7,13 @@ const CarouselItemWrapper = styled.div`
   scroll-snap-align: start;
   overflow-y: auto;
   background-color: ${(props) => props.bg};
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 function CarouselItem(props) {

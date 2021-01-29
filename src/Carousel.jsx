@@ -6,7 +6,7 @@ const CarouselWrapper = styled.div`
   width: 100%;
   background: black;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 `;
 
 const DotsWrapper = styled.div`
@@ -28,10 +28,15 @@ const Dot = styled.button`
   border: 0.3em solid #5e5c5c;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
   background-color: ${(props) => props.bg};
 
   :hover {
     background-color: gray;
+  }
+
+  :focus {
+    outline: none;
   }
 `;
 
@@ -71,11 +76,12 @@ function Carousel(props) {
     <CarouselWrapper ref={carouselWrapperRef}>
       {props.children}
       <DotsWrapper>
-        {props.children.map((_, index) => (
+        {props.children.map((child, index) => (
           <Dot
             bg={currentIndex === index ? "white" : "transparent"}
             key={index}
             onClick={() => handleScroll(index)}
+            title={child.props.title}
           ></Dot>
         ))}
       </DotsWrapper>
